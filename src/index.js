@@ -1,17 +1,14 @@
 import './styles.css';
 import menuTpl from './templates/menu-item.hbs';
 import menuItems from "./menu.json"
+import refs from "./refs.js"
 
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
 
-const refs = {
-  menuList: document.querySelector('.js-menu'),
-  checkbox: document.querySelector('#theme-switch-toggle'),
-  body: document.querySelector('body'),
-};
+
 
 
 refs.menuList.innerHTML = menuItems.map(menuTpl).join('');
